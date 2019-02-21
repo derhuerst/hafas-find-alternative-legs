@@ -19,7 +19,21 @@ npm install hafas-find-alternative-legs
 ## Usage
 
 ```js
-todo
+const createHafas = require('bvg-hafas')
+const createFetchAlternatives = require('hafas-find-alternative-legs')
+
+const hafas = createHafas('my awesome program')
+const fetchAlternatives = createFetchAlternatives(hafas)
+
+const friedrichstr = '900000100001'
+const senefelderplatz = '900000110005'
+
+hafas.journeys(friedrichstr, senefelderplatz, {results: 1})
+.then(([journey]) => fetchAlternatives(journey))
+.then((journeyWithAlternatives) => {
+	console.log(journeyWithAlternatives.legs)
+})
+.catch(console.error)
 ```
 
 
