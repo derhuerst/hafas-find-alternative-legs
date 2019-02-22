@@ -52,8 +52,8 @@ const alt2Dep = toIso(fromIso(dep) + 1 * minute)
 
 const hafasMock = {
 	journeys: (from, to, opt) => {
-		a.strictEqual(from, 'A')
-		a.strictEqual(to, 'B')
+		a.strictEqual(from, leg.origin)
+		a.strictEqual(to, leg.destination)
 		a.ok(opt)
 		a.strictEqual(fromIso(opt.departure), fromIso(dep) - 10 * minute)
 		a.strictEqual(opt.transfers, 0)
