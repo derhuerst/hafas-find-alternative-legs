@@ -27,7 +27,7 @@
 		"debug": "^4.1.1"
 	},
 	"devDependencies": {
-		"bvg-hafas": "^1.0.1"
+		"bvg-hafas": "^3.0.1"
 	},
 	"scripts": {
 		"test": "env NODE_ENV=dev node test.js",
