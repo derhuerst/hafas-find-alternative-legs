@@ -1,36 +1,40 @@
 {
-	"name": "hafas-find-alternative-legs",
-	"description": "Given a journey, get alternatives for each leg from HAFAS.",
-	"version": "1.0.0",
-	"main": "index.js",
-	"files": [
-		"index.js",
-		"example.js"
-	],
-	"keywords": [
-		"hafas",
-		"leg",
-		"alternative",
-		"cycle",
-		"earlier",
-		"later"
-	],
-	"author": "Jannis R <mail@jannisr.de>",
-	"homepage": "https://github.com/derhuerst/hafas-find-alternative-legs",
-	"repository": "derhuerst/hafas-find-alternative-legs",
-	"bugs": "https://github.com/derhuerst/hafas-find-alternative-legs/issues",
-	"license": "ISC",
-	"engines": {
-		"node": ">=8"
-	},
-	"dependencies": {
-		"debug": "^4.1.1"
-	},
-	"devDependencies": {
-		"bvg-hafas": "^1.0.1"
-	},
-	"scripts": {
-		"test": "env NODE_ENV=dev node test.js",
-		"prepublishOnly": "npm test"
-	}
+  "name": "hafas-find-alternative-legs",
+  "description": "Given a journey, get alternatives for each leg from HAFAS.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "example.js"
+  ],
+  "keywords": [
+    "hafas",
+    "leg",
+    "alternative",
+    "cycle",
+    "earlier",
+    "later"
+  ],
+  "author": "Jannis R <mail@jannisr.de>",
+  "homepage": "https://github.com/derhuerst/hafas-find-alternative-legs",
+  "repository": "derhuerst/hafas-find-alternative-legs",
+  "bugs": "https://github.com/derhuerst/hafas-find-alternative-legs/issues",
+  "license": "ISC",
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "snyk": "^1.320.2"
+  },
+  "devDependencies": {
+    "bvg-hafas": "^1.0.1"
+  },
+  "scripts": {
+    "test": "env NODE_ENV=dev node test.js",
+    "prepublishOnly": "npm test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
